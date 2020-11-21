@@ -27,11 +27,16 @@ const About = ()=>{
 const StyledBTN = styled.a`
 font-size:1.5rem;
 text-decoration:none;
-border:1px solid #23D997;
+border:2px solid #23D997;
 align-self:flex-start;
-padding:1rem;
+padding:1rem 2rem;
 margin-top:25px;
 color:white;
+transition:all .3s ease;
+ &:hover{
+     background-color:#23D997;
+     color:white;
+ }
 `;
 
 
