@@ -1,5 +1,7 @@
 import React,{useRef,useEffect} from 'react';
 import styled from 'styled-components';
+import {Line} from '../components/globalStyled';
+
 const Facseqtion = () =>{
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -35,14 +37,14 @@ const Facseqtion = () =>{
                         </div>
                       
                     </StyledQuestion>
-                    <Line></Line>
+                    <Line color='#fff'></Line>
                     <StyledQuestion className="question">
                         <h3 onClick={(e)=>{toggleAnswer(e,ref2)}}>Daily Schedule</h3>
                         <div className="answer" ref={ref2}>
                             Lorem ipsum dolor sit, amet consectetur adip</div>
                             
                     </StyledQuestion>
-                    <Line></Line>
+                    <Line color='#fff'></Line>
                     <StyledQuestion className="question">
                         <h3 onClick={(e)=>{toggleAnswer(e,ref3)}}>Different Payment Methods</h3>
                         <div className="answer" ref={ref3}>
@@ -50,7 +52,7 @@ const Facseqtion = () =>{
                         </div>
                        
                     </StyledQuestion>
-                    <Line></Line>
+                    <Line color='#fff'></Line>
                 </StyledList>
         </StyledFaq>
     );
@@ -66,7 +68,7 @@ overflow:hidden;
             height:0px;
             transition:0.2s ease;
             padding-top:2rem;
-            font-size:2rem;
+            font-size:1.5rem;
             color:gray;
 
         }
@@ -75,7 +77,7 @@ overflow:hidden;
 
 const StyledList = styled.div`
     margin:0 auto;
-    font-size:3.5rem;
+    font-size:2rem;
     color:#fff;
     h3{
         cursor:pointer;
@@ -103,13 +105,6 @@ const StyledFaq = styled.div`
         color:#23D997;
     }
 
-`;
-const Line = styled.div`
-    width:100%;
-    background-color: #fff;
-    padding: 0.2rem;
-    margin-bottom:5rem;
-    margin-top:1rem; 
 `;
 
 export default Facseqtion;
