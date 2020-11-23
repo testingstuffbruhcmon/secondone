@@ -7,9 +7,9 @@ const Nav = ()=>{
             <StyledNav className="Nav">
                 <h5 className="logo">Capture</h5>
                 <ul className="links">
-                    <Link to='/about' className="link">1.About us</Link>
-                    <Link to='/work' className="link">2.Our work</Link>
-                    <Link to='/contact' className="link">3.Contact us</Link>
+                    <Link to='/about' className="link">1. About us</Link>
+                    <Link to='/work' className="link">2. Our work</Link>
+                    <Link to='/contact' className="link">3. Contact us</Link>
                 </ul>
             </StyledNav>
 
@@ -33,10 +33,12 @@ const StyledNav = styled.nav`
         
         .link{
             color:white;
-            font-size:1.5rem;       
+            font-size:1.3rem;       
             text-decoration:none;
             cursor:pointer;
-            margin-left:2rem;
+            margin-left:1rem;
+            letter-spacing:1.1px;
+            font-weight:lighter;
         }
     }
 

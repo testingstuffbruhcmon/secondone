@@ -1,13 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {Line} from './globalStyled';
 const SingleMovie = ({mov})=>{
 
     return(
-        <StyledSingle className='single' style={{color:'black',fontSize:'25px'}}>
+        <StyledSingle className='single' style={{color:'black',fontSize:'25px'}} >
                 <h2>{mov.title}</h2>
                 <Line color='#23d997' mgbot='5rem'></Line>
-                <img src={`https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${mov['poster_path']}`} alt='Cover'/>
+    <Link to={`/movies/${mov.id}`}><img src={`https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${mov['poster_path']}`} alt='Cover'/>
+    </Link>
             </StyledSingle>
     )
 }

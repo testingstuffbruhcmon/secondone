@@ -3,6 +3,7 @@ import Nav from '../components/Nav';
 import About from '../pages/About';
 import Work from '../pages/Work';
 import Contact from '../pages/Contact';
+import MovieDetail from './MovieDetail';
 import fetchMovies from '../fetchMovies';
 import {Switch,Route} from 'react-router-dom';
 
@@ -30,6 +31,9 @@ const App = () =>{
                 </Route>
                 <Route exact path='/contact'>
                       <Contact />
+                </Route>
+                <Route path={`/movies/:mov_id`}>
+                    <MovieDetail/>
                 </Route>
             </Switch>
            

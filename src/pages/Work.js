@@ -8,7 +8,7 @@ const Work = ({movies})=>{
     //details needed: title img synapsis, otherstuff
     console.log(movies)
     return (
-        <StyledMovies className='movies' style={{padding:'5rem 0'}}>
+        <StyledMovies className='movies'>
             {movies.map((movie)=>{
                 return <SingleMovie mov={movie} key={movie.id} />
             })}
@@ -18,8 +18,8 @@ const Work = ({movies})=>{
     
 }
 const StyledMovies = styled.div`
-
-    
+padding:5rem 0;
+background-color:rgba(25,25,25,.1)
 `;
 
 
