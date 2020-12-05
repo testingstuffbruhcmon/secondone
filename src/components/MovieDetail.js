@@ -3,6 +3,31 @@ import styled from 'styled-components';
 import axios from 'axios';
 import {Line} from './globalStyled';
 import {withRouter} from 'react-router-dom';
+import {motion} from 'framer-motion';
+const Fadevariant = {
+    hidden:{
+        opacity:0,
+        y:'-15vh',
+    },
+    show:{
+        opacity:1,
+        y:0,
+        transition:{
+            duration:0.2,
+            type:'tween',
+          
+        }
+    },
+    exit:{
+        opacity:0,
+        y:200,
+        transition:{
+            duration:.5,
+            type:'spring',
+        }
+    }
+}
+
 
 const MovieDetail = (props)=>{
     const [currentId] = useState(props.match.params.mov_id);
@@ -37,7 +62,7 @@ const MovieDetail = (props)=>{
         }
 
     return (
-        <StyledDetails className='moviedetails'>
+        <StyledDetails className='moviedetails' variants = {Fadevariant} initial='hidden' animate='show' exit='exit'>
                 <h2>{current.title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${current['poster_path']}`} alt='coverImg'/>
                 <StyledRevs className='revs'> 
@@ -62,7 +87,7 @@ const MovieDetail = (props)=>{
     );
 
 }
-const StyledDetails = styled.div`
+const StyledDetails = styled(motion.div)`
  background-color:rgb(30,30,30);
     h2{
         padding:4rem;

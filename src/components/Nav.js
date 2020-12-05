@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 const Nav = ()=>{
     return (
-            <StyledNav className="Nav">
+            <StyledNav className="Nav" animate={{}}>
                 <h5 className="logo">Capture</h5>
                 <ul className="links">
                     <Link to='/about' className="link">1. About us</Link>
@@ -16,7 +17,7 @@ const Nav = ()=>{
     );
 }
 
-const StyledNav = styled.nav`
+const StyledNav = styled(motion.nav)`
     background: rgba(33,33,33,.95);
     padding:2rem 15rem;
     display:flex;
