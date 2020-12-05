@@ -10,7 +10,8 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(39, 39, 39, 0.9); }
+  background: rgba(39, 39, 39, 0.9);
+  overflow-x: hidden; }
 
 html {
   font-size: 62.5%;

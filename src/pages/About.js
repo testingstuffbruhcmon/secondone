@@ -3,7 +3,7 @@ import Aboutsection from "../components/Aboutsection";
 import Servicesection from "../components/Servicesection";
 import Faqsection from "../components/Faqsection";
 import styled from "styled-components";
-import { motion, startVisualElementAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Fadevariant = {
   hidden: {
